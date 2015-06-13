@@ -23,7 +23,7 @@
         <td><img src="<%= bookshelf.book_img %>" class="img-responsive"></td>
         <td><%= bookshelf.book_title %></td>
         <td><%= bookshelf.author %></td>
-        <td><%= bookshelf.price %></td>
+        <td><%= number_to_currency(bookshelf.price, unit:'¥',precision:0) %></td>
         <td><%= bookshelf.publisher %></td>
         <td><%= bookshelf.release_date %></td>
         <td><%= bookshelf.isbn_code %></td>

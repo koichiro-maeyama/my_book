@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Book title:</strong>
+  <%= @bookshelf.book_title %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @bookshelf.author %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @bookshelf.price %>
+</p>
+
+<p>
+  <strong>Publisher:</strong>
+  <%= @bookshelf.publisher %>
+</p>
+
+<p>
+  <strong>Release date:</strong>
+  <%= @bookshelf.release_date %>
+</p>
+
+<p>
+  <strong>Isbn code:</strong>
+  <%= @bookshelf.isbn_code %>
+</p>
+
+<p>
+  <strong>表紙:</strong>
+  <%= @bookshelf.book_img %>
+</p>
+
+<%= link_to 'Edit', edit_bookshelf_path(@bookshelf) %> |
+<%= link_to 'Back', bookshelves_path %>

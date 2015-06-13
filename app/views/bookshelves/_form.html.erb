@@ -1,0 +1,46 @@
+
+<%= form_for(@bookshelf) do |f| %>
+  <% if @bookshelf.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bookshelf.errors.count, "error") %> prohibited this bookshelf from being saved:</h2>
+
+      <ul>
+      <% @bookshelf.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :book_title %>
+    <%= f.text_field :book_title,class:"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :author %><br>
+    <%= f.text_field :author,class:"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :price %><br>
+    <%= f.number_field :price,class:"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :publisher %><br>
+    <%= f.text_field :publisher,class:"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :release_date %><br>
+    <%= f.date_select :release_date %>
+  </div>
+  <div class="form-group">
+    <%= f.label :isbn_code %><br>
+    <%= f.text_field :isbn_code,class:"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :book_img %><br>
+    <%= f.text_field :book_img,class:"form-control" %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

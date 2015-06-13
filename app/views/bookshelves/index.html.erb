@@ -25,7 +25,7 @@
         <td><%= bookshelf.author %></td>
         <td><%= number_to_currency(bookshelf.price, unit:'¥',precision:0) %></td>
         <td><%= bookshelf.publisher %></td>
-        <td><%= bookshelf.release_date %></td>
+        <td><%= bookshelf.release_date.strftime('%Y/%m/%d') %></td>
         <td><%= bookshelf.isbn_code %></td>
         <td><%= link_to '閲覧', bookshelf, class:"btn btn-success btn-xs" %></td>
         <td><%= link_to '編集', edit_bookshelf_path(bookshelf), class:"btn btn-info btn-xs" %></td>
